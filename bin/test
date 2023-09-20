@@ -26,8 +26,8 @@ export PATH="$pythonlayer"/bin:$PATH
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}"$pythonlayer/lib"
 
 # INSTALL PIP
-echo "---> Installing pip"
-python -m ensurepip --upgrade
+echo "---> Installing pip with python3"
+python3 -m ensurepip --upgrade
 
 # INSTALL YAMLLINT
 echo "---> Installing yamllint"
