@@ -22,7 +22,7 @@ python_url=https://s3-external-1.amazonaws.com/heroku-buildpack-python/archive/h
 wget -q -O - "$python_url" | tar -xzf - -C "$pythonlayer"
 
 # MAKE PYTHON AVAILABLE TO THIS SCRIPT
-export PATH="$pythonlayer"/bin:$PATH
+export PATH="$pythonlayer"/bin/python3:$PATH
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:+${LD_LIBRARY_PATH}:}"$pythonlayer/lib"
 
 # INSTALL PIP
